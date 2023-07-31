@@ -94,14 +94,14 @@ export class PollComponent implements OnInit {
     }
 
     sendmessage() {
-        // const reqObj1 = {
-        //     "camp_name" : this.pollForm.value.campaignName,
-        //     "temp_name" : this.pollForm.value.templateName,
-        //     "mobile_number" : this.arrayofnumber
-        // }
-        // this.pollService.insertcampdetails(reqObj1).subscribe((res : any) => {
-        //     console.log(res)
-        // })
+        const reqObj1 = {
+            "camp_name" : this.pollForm.value.campaignName,
+            "temp_name" : this.pollForm.value.templateName,
+            "mobile_number" : this.arrayofnumber
+        }
+        this.pollService.insertcampdetails(reqObj1).subscribe((res : any) => {
+            console.log(res)
+        })
 
 
         const reqObj2 = {

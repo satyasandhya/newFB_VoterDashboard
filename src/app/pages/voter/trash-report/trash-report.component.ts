@@ -67,8 +67,8 @@ export class TrashReportComponent {
     console.log(this.trashForm.value.date_range);
     this.PageIndex = 1;
     this.filteredData = this.respone.filter((item: any) =>
-      new Date(item.timestamp) >= new Date(this.trashForm.value.date_range[0]) &&
-      new Date(item.timestamp) <= new Date(this.trashForm.value.date_range[1])
+      new Date(item.updated_at) >= new Date((moment(this.trashForm.value.date_range[0]).format("YYYY/MM/DD"))) &&
+      new Date(item.updated_at) <= new Date((moment(this.trashForm.value.date_range[1]).format("YYYY/MM/DD")))
     );
     console.log(this.filteredData);
     this.generateTotalReport(this.filteredData);

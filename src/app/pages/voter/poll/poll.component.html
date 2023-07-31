@@ -5,9 +5,9 @@
     <label for="">Enter Campaign Name :-</label>
     <input nzSize = "default" nzRight nz-input formControlName = "campaignName" placeholder="Campaign name" />&nbsp; 
     <br> <br>
-    <label for="">Enter Template Name :- </label>
+    <label for="">Facebook Template Name :- </label>
     <input nzSize = "default" nzRight nz-input formControlName = "templateName" placeholder="Template name" />&nbsp; 
-    <button nz-button nzType="primary"  [hidden]=" arrayofnumber.length < 1" (click) ="sendmessage()">Send</button>&nbsp;&nbsp;
+    <button nz-button nzType="primary"  [hidden]=" arrayofnumber.length < 1" (click) ="sendmessage()" [nzLoading]="isLoadingOne">Send</button>&nbsp;&nbsp;
      
    
     <!-- <button nz-button nzType="primary" (click)="finduniqueNumber()" [nzLoading]="isLoadingOne">Find uniqueNumber</button>&nbsp;&nbsp; -->
