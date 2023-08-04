@@ -99,14 +99,14 @@ export class ReportComponent implements OnInit {
 
   delete(data: any) {
     if (window.confirm("Do you want to delete?")) {
-      let mobile_number = data.mobile_number;
+      let id = data.id;
 
       const reqObj = {
-        id: 1,
-        mobile_number: mobile_number,
+        is_deleted: 1,
+        id: id,
        }
        this.reportService.delete(reqObj).subscribe((res: any) => {
-        this.filteredData = this.filteredData.filter((item :any) => item.mobile_number !== mobile_number);
+        this.filteredData = this.filteredData.filter((item :any) => item.id !== id);
 
         console.log(res);
       })
