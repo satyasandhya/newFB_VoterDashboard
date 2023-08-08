@@ -61,7 +61,7 @@ export class ReportComponent implements OnInit {
       });
 
       for (let i = 0; i < this.respone.length; i++) {
-        for (let j = 0; j < this.campdata.length; j++) {
+        for (let j = this.campdata.length - 1 ; j  >= 0 ; j--) {
           if (this.respone[i].mobile_number == this.campdata[j].mobile_number) {
             this.respone[i].campaign_name = this.campdata[j].campaign_name;
             this.respone[i].template_name = this.campdata[j].template_name;
